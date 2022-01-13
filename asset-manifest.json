@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bhoomi-basera/static/css/main.a8d7a265.css",
+    "main.js": "/bhoomi-basera/static/js/main.07ed952b.js",
+    "static/media/background.webp": "/bhoomi-basera/static/media/background.d1ff95aeb44354c890ba.webp",
+    "index.html": "/bhoomi-basera/index.html",
+    "main.a8d7a265.css.map": "/bhoomi-basera/static/css/main.a8d7a265.css.map",
+    "main.07ed952b.js.map": "/bhoomi-basera/static/js/main.07ed952b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8d7a265.css",
+    "static/js/main.07ed952b.js"
+  ]
+}
