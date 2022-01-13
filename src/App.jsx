@@ -3,7 +3,7 @@ import ApplicationRoutes from "./routes";
 import "./App.css";
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/bhoomi-basera">
       <ApplicationRoutes />
     </BrowserRouter>
   );
