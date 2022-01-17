@@ -16,10 +16,40 @@ a {
   color: white;
 }
 
+.logo {
+  width: auto;
+  height: 45px;
+  background-repeat: no-repeat;
+}
+
 .home-intro {
-  height: 100vh;
+  height: 318px;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../assets/background.webp);
-  background-position: center top;
+    url(../assets/bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations {
+  width: calc(100vw - 48px);
+  display: flex;
+  overflow: auto;
+  padding: 24px;
+}
+
+.recommendations > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-intro {
+    height: 218px;
+  }
 }
