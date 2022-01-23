@@ -10,9 +10,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-import Logo from "../common/logo.png";
+import Logo from "../common/logo.jpg";
 
-const pages = ["Properties", "About", "Services"];
+const pages = ["Properties"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -26,16 +26,6 @@ const Navbar = () => {
   };
 
   return (
-    // <nav className="navbar-intro">
-    //   <span>
-    //     <img className="logo" src="data:," alt="" />
-    //     <Link to="/">Company</Link>
-    //     <Link to="about">About</Link>
-    //     <Button variant="outlined">
-    //       <Link to="services">Services</Link>
-    //     </Button>
-    //   </span>
-    // </nav>
     <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>

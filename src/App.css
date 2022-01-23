@@ -34,20 +34,6 @@ a {
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 }
 
-.recommendations {
-  width: calc(100vw - 48px);
-  display: flex;
-  overflow: auto;
-  padding: 24px;
-}
-
-.recommendations > p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
 @media only screen and (max-width: 600px) {
   .home-intro {
     height: 218px;
