@@ -6,6 +6,7 @@ import work_execution from "./howitworks/work_execution.png";
 import satisfactory_delivery from "./howitworks/satisfactory_delivery.png";
 export const masterData = [
   {
+    id: 1,
     price: "₹ 1.2 crores",
     detail: "Near Dehradun Airport",
     imgUrl: imagePath,
@@ -25,6 +26,7 @@ export const masterData = [
     ],
   },
   {
+    id: 2,
     price: "₹ 1.2 crores",
     detail: "Near Dehradun Airport",
     imgUrl: imagePath,
@@ -44,6 +46,7 @@ export const masterData = [
     ],
   },
   {
+    id: 3,
     price: "₹ 1.2 crores",
     detail: "Near Dehradun Airport",
     imgUrl: imagePath,
@@ -63,6 +66,7 @@ export const masterData = [
     ],
   },
   {
+    id: 4,
     price: "₹ 1.2 crores",
     detail: "Near Dehradun Airport",
     imgUrl: imagePath,
@@ -82,6 +86,7 @@ export const masterData = [
     ],
   },
   {
+    id: 5,
     price: "₹ 1.2 crores",
     detail: "Near Dehradun Airport",
     imgUrl: imagePath,

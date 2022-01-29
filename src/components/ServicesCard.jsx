@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 export const ServicesCard = ({ title, logo, id, body }) => {
   return (
     <Card
+      key={id}
       variant="outlined"
       sx={{ width: 420, marginRight: 5, marginBottom: 5, border: "none" }}
     >
@@ -18,7 +19,6 @@ export const ServicesCard = ({ title, logo, id, body }) => {
           justifyContent: "flex-start",
           padding: 2,
         }}
-        key={id}
       >
         <Box
           sx={{

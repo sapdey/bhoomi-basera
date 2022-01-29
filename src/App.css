@@ -34,8 +34,22 @@ a {
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 }
 
+.whatsappLogo {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/yv/r/-r3j-x8ZnM7.svg");
+  background-position: 0;
+  background-color: unset;
+  border: none;
+  width: 39px;
+  height: 39px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .home-intro {
     height: 218px;
   }
+  /* .whatsappLogo {
+    width: 35px;
+    height: 35px;
+  } */
 }

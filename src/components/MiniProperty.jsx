@@ -6,9 +6,9 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import { CardActionArea } from "@mui/material";
 
-export const MiniProperty = ({ price, imgUrl, detail, specs, key }) => {
+export const MiniProperty = ({ price, imgUrl, detail, specs, id }) => {
   return (
-    <Card sx={{ width: 250, marginRight: "24px" }} key={key}>
+    <Card sx={{ width: 250, marginRight: "24px" }} key={id}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={imgUrl} alt="image" />
         <CardContent>
@@ -26,9 +26,9 @@ export const MiniProperty = ({ price, imgUrl, detail, specs, key }) => {
             display="flex"
           >
             {specs.map(({ type, value }, index) => (
-              <>
+              <React.Fragment key={index}>
                 {index !== 0 && <Divider orientation="vertical" flexItem />}
-                <Typography paddingX={1} component="div" key={index}>
+                <Typography paddingX={1} component="div">
                   <Typography variant="body2" color="text.primary">
                     {value}
                   </Typography>
@@ -36,7 +36,7 @@ export const MiniProperty = ({ price, imgUrl, detail, specs, key }) => {
                     {type}
                   </Typography>
                 </Typography>
-              </>
+              </React.Fragment>
             ))}
           </Typography>
         </CardContent>
