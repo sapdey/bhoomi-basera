@@ -10,9 +10,10 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-import Logo from "../common/logo.jpg";
+// import Logo from "../common/logo.jpg";
+import Logo from "../common/newlogo.JPG";
 
-const pages = ["Properties"];
+const pages = [];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -53,7 +54,7 @@ const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
+            {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -78,7 +79,7 @@ const Navbar = () => {
                   </Link>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
           <Typography
             variant="h6"
