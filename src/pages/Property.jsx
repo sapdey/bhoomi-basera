@@ -7,6 +7,7 @@ import Fab from "@mui/material/Fab";
 import CallIcon from "../common/call.svg";
 import logoCollection from "../common/logocol.webp";
 import { phoneNo } from "../common/constants";
+import FullScreenDialog from "../components/Dialog";
 
 const Property = () => {
   const { propertyId } = useParams();
@@ -21,7 +22,8 @@ const Property = () => {
       </Typography>
     );
 
-  const { imgUrl, price, state, type, location, specs, details } = property;
+  const { imgUrl, price, state, type, location, specs, details, videoURL } =
+    property;
   return (
     <Typography component="main">
       <Typography
@@ -29,7 +31,7 @@ const Property = () => {
         padding={2}
         borderBottom="1px solid #ebecf0"
       >
-        <CardMedia component="img" height="180" image={imgUrl} alt="image" />
+        <FullScreenDialog images={imgUrl} videoURL={videoURL} />
         <Typography
           variant="h5"
           paddingTop={2}
@@ -54,7 +56,7 @@ const Property = () => {
       </Typography>
       <Typography component="section" padding={2} paddingTop={3}>
         <Typography variant="body2" style={{ fontWeight: 400 }} color="#42526E">
-          Residential Land for {type} in
+          {type}
         </Typography>
         <Typography variant="body2" marginTop={0.5} style={{ fontWeight: 700 }}>
           {location}
@@ -62,14 +64,15 @@ const Property = () => {
         <Typography display="flex" component="div" marginTop={2}>
           {specs.map(({ value, type, logo, color, position }) => (
             <Typography
-              key={logo}
+              component="div"
+              key={value}
               marginX={1}
               display="flex"
               flexDirection="column"
               alignItems="center"
             >
-              {/* <CardMedia component="img" height="20" image={logo} alt="image" /> */}
               <Typography
+                component="div"
                 style={{
                   background: color,
                   width: "36px",
@@ -118,27 +121,37 @@ const Property = () => {
           Property Details
         </Typography>
         <Typography component="table">
-          {Object.keys(details).map((key) => (
-            <Typography component="tr">
-              <Typography
-                component="td"
-                width="131px"
-                marginBottom={3}
-                display="inline-block"
-                style={{ fontWeight: 400, color: "#42526e", fontSize: "12px" }}
-              >
-                {key}
+          <Typography component="tbody">
+            {Object.keys(details).map((key) => (
+              <Typography component="tr" key={key}>
+                <Typography
+                  component="td"
+                  width="131px"
+                  marginBottom={3}
+                  display="inline-block"
+                  style={{
+                    fontWeight: 400,
+                    color: "#42526e",
+                    fontSize: "12px",
+                  }}
+                >
+                  {key}
+                </Typography>
+                <Typography
+                  component="td"
+                  marginBottom={3}
+                  display="inline-block"
+                  style={{
+                    fontWeight: 700,
+                    color: "#091E42",
+                    fontSize: "12px",
+                  }}
+                >
+                  {details[key]}
+                </Typography>
               </Typography>
-              <Typography
-                component="td"
-                marginBottom={3}
-                display="inline-block"
-                style={{ fontWeight: 700, color: "#091E42", fontSize: "12px" }}
-              >
-                {details[key]}
-              </Typography>
-            </Typography>
-          ))}
+            ))}
+          </Typography>
         </Typography>
       </Typography>
       <Typography

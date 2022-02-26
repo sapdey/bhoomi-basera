@@ -13,6 +13,7 @@ import { phoneNo } from "../common/constants";
 
 const Home = () => {
   const matches = useMediaQuery("(min-width:600px)");
+  const videoURL = "https://youtu.be/HfHoOBvrJEs";
   // const intro =
   //   "These days, however, consumers and agents don't always have the opportunity to fully immerse their senses in properties for sale. Sellers have been reluctant to open their homes to strangers, and out-of-town buyers might not be able to navigate travel restrictions. Our aim is to provide a wide range of 3D /Ariel footage content and solutions across many industries and probably the pioneer company to bring the technology to Dehradun. Using specialised cameras, we create Virtual Tours of indoor and outdoor spaces for Residential and commercial lands including  houses. While virtual tours for real estate is the main thrust of the technology, other use cases include providing legal services, construction materials, architects, contractors and security to help you build your dream house.";
 
@@ -45,7 +46,7 @@ const Home = () => {
             display="flex"
             flexWrap="nowrap"
           >
-            {masterData.map((item, index) => (
+            {masterData.map((item) => (
               <MiniProperty {...item} />
             ))}
           </Typography>
@@ -81,11 +82,18 @@ const Home = () => {
         >
           Sample video
         </Typography>
+        <Typography marginY={4} variant="body2" color="text.secondary">
+          While sitting at your home comfort, we provide virtual tour of
+          properties to our customers across all four corners of Dehradun, and
+          outside. Our virtual touring include potential development around
+          property in the upcoming future, better understanding for customers
+          about the physical layout and connectivity
+        </Typography>
         <Typography component="div" display="flex" justifyContent="center">
           <ReactPlayer
             width={matches ? 640 : 320}
             height={matches ? 360 : 180}
-            url="https://www.youtube.com/watch?v=QuMWSrJyt3o"
+            url={videoURL}
           />
         </Typography>
       </Typography>

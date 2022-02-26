@@ -7,12 +7,17 @@ import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
 import { CardActionArea } from "@mui/material";
 
-export const MiniProperty = ({ price, imgUrl, detail, specs, id }) => {
+export const MiniProperty = ({ price, imgUrl, location, specs, id }) => {
   return (
     <Link key={id} to={`properties/${id}`}>
       <Card sx={{ width: 250, marginRight: "24px" }} key={id}>
         <CardActionArea>
-          <CardMedia component="img" height="140" image={imgUrl} alt="image" />
+          <CardMedia
+            component="img"
+            height="140"
+            image={imgUrl[0]}
+            alt="image"
+          />
           <CardContent>
             <Typography variant="h6" component="div">
               {price}
@@ -22,7 +27,7 @@ export const MiniProperty = ({ price, imgUrl, detail, specs, id }) => {
               variant="body2"
               color="text.secondary"
             >
-              {detail}
+              {location}
             </Typography>
             <Divider />
             <Typography
