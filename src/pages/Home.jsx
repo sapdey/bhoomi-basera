@@ -17,6 +17,15 @@ const Home = () => {
   // const intro =
   //   "These days, however, consumers and agents don't always have the opportunity to fully immerse their senses in properties for sale. Sellers have been reluctant to open their homes to strangers, and out-of-town buyers might not be able to navigate travel restrictions. Our aim is to provide a wide range of 3D /Ariel footage content and solutions across many industries and probably the pioneer company to bring the technology to Dehradun. Using specialised cameras, we create Virtual Tours of indoor and outdoor spaces for Residential and commercial lands including  houses. While virtual tours for real estate is the main thrust of the technology, other use cases include providing legal services, construction materials, architects, contractors and security to help you build your dream house.";
 
+  if (matches)
+    return (
+      <Typography component="main" marginTop={10}>
+        <Typography variant="h5" component="div" textAlign="center">
+          Please use a mobile device to view this website
+        </Typography>
+      </Typography>
+    );
+
   return (
     <Typography component="main" sx={{ overflowX: "hidden" }}>
       <section className="home-intro"></section>

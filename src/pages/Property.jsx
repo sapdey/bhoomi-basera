@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CardMedia from "@mui/material/CardMedia";
@@ -6,8 +7,13 @@ import { masterData } from "../common/constants";
 import Fab from "@mui/material/Fab";
 import CallIcon from "../common/call.svg";
 import logoCollection from "../common/logocol.webp";
+import ReactPlayer from "react-player/youtube";
 import { phoneNo } from "../common/constants";
 import FullScreenDialog from "../components/Dialog";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const Property = () => {
   const { propertyId } = useParams();
@@ -15,10 +21,21 @@ const Property = () => {
 
   const matches = useMediaQuery("(min-width:600px)");
 
+  const [activeUrl, setActiveUrl] = useState("");
+
   if (!property)
     return (
       <Typography padding={6} textAlign="center">
         Property not found
+      </Typography>
+    );
+
+  if (matches)
+    return (
+      <Typography component="main" marginTop={10}>
+        <Typography variant="h5" component="div" textAlign="center">
+          Please use a mobile device to view this website
+        </Typography>
       </Typography>
     );
 
@@ -31,7 +48,54 @@ const Property = () => {
         padding={2}
         borderBottom="1px solid #ebecf0"
       >
-        <FullScreenDialog images={imgUrl} videoURL={videoURL} />
+        {/* <FullScreenDialog images={imgUrl} videoURL={videoURL} /> */}
+        <Carousel autoPlay={false} showThumbs={false}>
+          {imgUrl.map((url) => (
+            <Typography component="div" onClick={() => setActiveUrl(url)}>
+              <CardMedia component="img" image={url} alt="image" />
+            </Typography>
+          ))}
+        </Carousel>
+        <Modal
+          open={!!activeUrl}
+          onClose={() => setActiveUrl("")}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box bgcolor="white">
+            <Typography
+              component="div"
+              variant="h4"
+              textAlign="right"
+              marginRight={2}
+              marginBottom="-40px"
+              onClick={() => setActiveUrl("")}
+            >
+              x
+            </Typography>
+            <Typography
+              component="div"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              height="100vh"
+            >
+              {/* <CardMedia
+                component="img"
+                image={crossUrl}
+                alt="active-image"
+                // width={100}
+                height={30}
+              /> */}
+              <CardMedia
+                component="img"
+                image={activeUrl}
+                alt="active-image"
+                width="100%"
+              />
+            </Typography>
+          </Box>
+        </Modal>
         <Typography
           variant="h5"
           paddingTop={2}
@@ -152,6 +216,21 @@ const Property = () => {
               </Typography>
             ))}
           </Typography>
+        </Typography>
+        <Typography component="div" variant="h5" marginBottom={2}>
+          Property Drone view
+        </Typography>
+        <Typography
+          component="div"
+          marginTop={2}
+          display="flex"
+          justifyContent="center"
+        >
+          <ReactPlayer
+            width={matches ? 640 : 320}
+            height={matches ? 360 : 180}
+            url={videoURL}
+          />
         </Typography>
       </Typography>
       <Typography
