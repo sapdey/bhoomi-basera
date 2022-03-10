@@ -3,7 +3,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import CardMedia from "@mui/material/CardMedia";
 import ReactPlayer from "react-player/youtube";
 import { MiniProperty } from "../components/MiniProperty";
-import { masterData, howitworks, SERVICES } from "../common/constants";
+import {
+  plotOnSale,
+  plotOnRent,
+  howitworks,
+  SERVICES,
+} from "../common/constants";
 import { WorksCard } from "../components/WorksCard";
 import { ServicesCard } from "../components/ServicesCard";
 import CallIcon from "../common/call.svg";
@@ -39,7 +44,7 @@ const Home = () => {
           marginBottom={2}
           textAlign="center"
         >
-          Handpicked Properties
+          Properties on Sale
         </Typography>
         <Typography
           component="div"
@@ -55,7 +60,37 @@ const Home = () => {
             display="flex"
             flexWrap="nowrap"
           >
-            {masterData.map((item) => (
+            {plotOnSale.map((item) => (
+              <MiniProperty {...item} />
+            ))}
+          </Typography>
+        </Typography>
+      </Typography>
+
+      <Typography component="section" padding={4}>
+        <Typography
+          variant="h5"
+          component="div"
+          marginBottom={2}
+          textAlign="center"
+        >
+          Properties on Rent
+        </Typography>
+        <Typography
+          component="div"
+          overflow="auto"
+          // width="100vw"
+          display="flex"
+          paddingLeft="1px"
+          paddingBottom={2}
+        >
+          <Typography
+            component="div"
+            variant="body1"
+            display="flex"
+            flexWrap="nowrap"
+          >
+            {plotOnRent.map((item) => (
               <MiniProperty {...item} />
             ))}
           </Typography>

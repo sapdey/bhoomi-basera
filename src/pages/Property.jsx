@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CardMedia from "@mui/material/CardMedia";
 import { useParams } from "react-router-dom";
-import { masterData } from "../common/constants";
+import { plotOnSale, plotOnRent } from "../common/constants";
 import Fab from "@mui/material/Fab";
 import CallIcon from "../common/call.svg";
 import logoCollection from "../common/logocol.webp";
@@ -17,11 +17,12 @@ import { Carousel } from "react-responsive-carousel";
 
 const Property = () => {
   const { propertyId } = useParams();
+  const masterData = [...plotOnSale, ...plotOnRent];
   const property = masterData[propertyId - 1];
 
   const matches = useMediaQuery("(min-width:600px)");
 
-  const [activeUrl, setActiveUrl] = useState("");
+  const [activeImg, setActiveImg] = useState(-1);
 
   if (!property)
     return (
@@ -50,15 +51,15 @@ const Property = () => {
       >
         {/* <FullScreenDialog images={imgUrl} videoURL={videoURL} /> */}
         <Carousel autoPlay={false} showThumbs={false}>
-          {imgUrl.map((url) => (
-            <Typography component="div" onClick={() => setActiveUrl(url)}>
+          {imgUrl.map((url, i) => (
+            <Typography component="div" onClick={() => setActiveImg(i)}>
               <CardMedia component="img" image={url} alt="image" />
             </Typography>
           ))}
         </Carousel>
         <Modal
-          open={!!activeUrl}
-          onClose={() => setActiveUrl("")}
+          open={activeImg > -1}
+          onClose={() => setActiveImg(-1)}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
@@ -69,7 +70,7 @@ const Property = () => {
               textAlign="right"
               marginRight={2}
               marginBottom="-40px"
-              onClick={() => setActiveUrl("")}
+              onClick={() => setActiveImg(-1)}
             >
               x
             </Typography>
@@ -87,12 +88,23 @@ const Property = () => {
                 // width={100}
                 height={30}
               /> */}
-              <CardMedia
+              {/* <CardMedia
                 component="img"
-                image={activeUrl}
+                image={activeImg}
                 alt="active-image"
                 width="100%"
-              />
+              /> */}
+              <Carousel
+                selectedItem={activeImg}
+                autoPlay={false}
+                showThumbs={false}
+              >
+                {imgUrl.map((url) => (
+                  <Typography component="div">
+                    <CardMedia component="img" image={url} alt="image" />
+                  </Typography>
+                ))}
+              </Carousel>
             </Typography>
           </Box>
         </Modal>

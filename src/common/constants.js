@@ -1,6 +1,18 @@
 import img1P1 from "./properties/1/image1.jpg";
 import img2P1 from "./properties/1/image2.jpg";
 import img3P1 from "./properties/1/image3.jpg";
+import img1P2 from "./properties/jogiwala/img1.jpg";
+import img2P2 from "./properties/jogiwala/img2.jpg";
+import img3P2 from "./properties/jogiwala/img3.jpg";
+import img4P2 from "./properties/jogiwala/img4.jpg";
+import img1P3 from "./properties/shimla-bypass/img1.jpg";
+import img2P3 from "./properties/shimla-bypass/img2.jpg";
+import img3P3 from "./properties/shimla-bypass/img3.jpg";
+import img4P3 from "./properties/shimla-bypass/img4.jpg";
+import img1P4 from "./properties/naya-gaon/img1.jpg";
+import img2P4 from "./properties/naya-gaon/img2.jpg";
+import img3P4 from "./properties/naya-gaon/img3.jpg";
+import img4P4 from "./properties/naya-gaon/img4.jpg";
 import your_requirement from "./howitworks/your_requirement.png";
 import cost_estimation from "./howitworks/cost_estimation.png";
 import schedule_visit from "./howitworks/schedule_visit.png";
@@ -12,115 +24,115 @@ import contractors from "./services/contractors.png";
 import legal_advisory from "./services/legal_advisory.png";
 import security_services from "./services/security_services.png";
 export const phoneNo = "+917507143666";
-export const masterData = [
+export const plotOnSale = [
   {
     id: 1,
-    price: "₹20,000 per month",
-    imgUrl: [img1P1, img2P1, img3P1],
+    price: "₹79,04,000",
+    imgUrl: [img1P2, img2P2, img3P2, img4P2],
     specs: [
       {
         type: "Total area",
-        value: "60750 sq. ft.",
+        value: "1854 sq. ft.",
         logo: 1,
         color: "#F0F9FF",
         position: "-220px -20px",
       },
       {
-        type: "Facing",
-        value: "West",
+        type: "38000 per Guz",
+        value: "₹4263 per Sq f.t",
+        color: "#FFF5E4",
+        position: "-280px -80px",
+      },
+      // {
+      //   type: "haha",
+      //   value: "hehe",
+      //   color: "#F0F9FF",
+      //   position: "0px 0px",
+      // },
+    ],
+    type: "Plot for Resale in Alaknanda Enclave",
+    location: "Jogiwala",
+    state: "Ready to Move",
+    details: {
+      Ownership: "Freehold",
+      "Super Area": "1854 sq.ft / 208 Guz",
+      Overlooking: "Next to Road",
+      "Width of facing road": "20.0 ft",
+      Facing: "North West",
+      "Boundary wall": "Two Sided",
+    },
+    videoURL: "https://www.youtube.com/watch?v=TyBUG3lz5xM",
+  },
+  {
+    id: 2,
+    price: "₹29,64,000",
+    imgUrl: [img1P3, img2P3, img3P3, img4P3],
+    specs: [
+      {
+        type: "Total area",
+        value: "2781 sq. ft.",
+        logo: 1,
+        color: "#F0F9FF",
+        position: "-220px -20px",
+      },
+      {
+        type: "9500 per Guz",
+        value: "₹1065 per Sq f.t",
+        color: "#FFF5E4",
+        position: "-280px -80px",
+      },
+      // {
+      //   type: "haha",
+      //   value: "hehe",
+      //   color: "#F0F9FF",
+      //   position: "0px 0px",
+      // },
+    ],
+    type: "Plot for Resale in Shimla Bypass",
+    location: "Ramgarh",
+    state: "Ready to Move",
+    details: {
+      Ownership: "Freehold",
+      "Super Area": "2781 sq.ft / 312 Guz",
+      Overlooking: "Next to Road",
+      "Width of facing road": "20.0 ft",
+      Facing: "North East",
+      "Boundary wall": "None",
+    },
+    videoURL: "https://www.youtube.com/watch?v=vNIjFQlnTyg",
+  },
+  {
+    id: 3,
+    price: "₹46,80,500",
+    imgUrl: [img1P4, img2P4, img3P4, img4P4],
+    specs: [
+      {
+        type: "Total area",
+        value: "2781 sq. ft.",
+        logo: 1,
+        color: "#F0F9FF",
+        position: "-220px -20px",
+      },
+      {
+        type: "11500 per Guz",
+        value: "₹1464 per Sq f.t.",
         color: "#FFF5E4",
         position: "-280px -80px",
       },
     ],
-    type: "Farmhouse for Rent in",
-    location: "Shimla Bypass",
+    type: "Plot For Resale in Shimla Bypass",
+    location: "Nya Gaon",
     state: "Ready to Move",
     details: {
       Ownership: "Freehold",
-      "Super Area": "60750 sq.ft.",
+      "Super Area": "3196 sq.ft / 407 Guz",
       Overlooking: "Next to Road",
-      "Width of facing road": "20.0 ft",
-      Facing: "West",
-      "Boundary wall": "Yes",
+      "Width of facing road": "16.0 ft (Two Sided Road)",
+      Facing: "South West",
+      "Boundary wall": "None",
     },
-    videoURL: "https://youtu.be/HfHoOBvrJEs",
+    videoURL: "https://www.youtube.com/watch?v=dGaf1q8Wy3c",
   },
-  // {
-  //   id: 2,
-  //   price: "₹ 1.2 crores",
-  //   detail: "Near Dehradun Airport",
-  //   imgUrl: imagePath,
-  //   specs: [
-  //     {
-  //       type: "Carpet area",
-  //       value: "360 sq. ft.",
-  //       logo: 1,
-  //       color: "#F0F9FF",
-  //       position: "-220px -20px",
-  //     },
-  //     {
-  //       type: "Facing",
-  //       value: "East",
-  //       color: "#FFF5E4",
-  //       position: "-280px -80px",
-  //     },
-  //     {
-  //       type: "haha",
-  //       value: "hehe",
-  //       color: "#F0F9FF",
-  //       position: "0px 0px",
-  //     },
-  //   ],
-  //   type: "Resale",
-  //   location: "Sahastradhara",
-  //   state: "Ready to Move",
-  //   details: {
-  //     Ownership: "Freehold",
-  //     "Super Area": "1125 sq.ft.",
-  //     Overlooking: "Main Road",
-  //     "Width of facing road": "20.0 ft",
-  //     Facing: "East",
-  //     "Boundary wall": "Yes",
-  //   },
-  // },
-  // {
-  //   id: 3,
-  //   price: "₹ 1.2 crores",
-  //   detail: "Near Dehradun Airport",
-  //   imgUrl: imagePath,
-  //   specs: [
-  //     {
-  //       type: "Carpet area",
-  //       value: "360 sq. ft.",
-  //       logo: 1,
-  //       color: "#F0F9FF",
-  //       position: "-220px -20px",
-  //     },
-  //     {
-  //       type: "Facing",
-  //       value: "East",
-  //       color: "#FFF5E4",
-  //       position: "-280px -80px",
-  //     },
-  //     {
-  //       type: "haha",
-  //       value: "hehe",
-  //       color: "#F0F9FF",
-  //       position: "0px 0px",
-  //     },
-  //   ],
-  //   type: "Resale",
-  //   location: "Sahastradhara",
-  //   state: "Ready to Move",
-  //   details: {
-  //     Ownership: "Freehold",
-  //     "Super Area": "1125 sq.ft.",
-  //     Overlooking: "Main Road",
-  //     "Width of facing road": "20.0 ft",
-  //     Facing: "East",
-  //     "Boundary wall": "Yes",
-  //   },
-  // },
   // {
   //   id: 4,
   //   price: "₹ 1.2 crores",
@@ -197,6 +209,41 @@ export const masterData = [
   //     "Boundary wall": "Yes",
   //   },
   // },
+];
+
+export const plotOnRent = [
+  {
+    id: 4,
+    price: "₹20,000 per month",
+    imgUrl: [img1P1, img2P1, img3P1],
+    specs: [
+      {
+        type: "Total area",
+        value: "60750 sq. ft.",
+        logo: 1,
+        color: "#F0F9FF",
+        position: "-220px -20px",
+      },
+      {
+        type: "Facing",
+        value: "West",
+        color: "#FFF5E4",
+        position: "-280px -80px",
+      },
+    ],
+    type: "Farmhouse for Rent in",
+    location: "Shimla Bypass",
+    state: "Ready to Move",
+    details: {
+      Ownership: "Freehold",
+      "Super Area": "60750 sq.ft.",
+      Overlooking: "Next to Road",
+      "Width of facing road": "20.0 ft",
+      Facing: "West",
+      "Boundary wall": "Yes",
+    },
+    videoURL: "https://www.youtube.com/watch?v=HfHoOBvrJEs",
+  },
 ];
 
 export const howitworks = [
