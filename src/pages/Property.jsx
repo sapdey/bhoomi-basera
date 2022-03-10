@@ -40,8 +40,17 @@ const Property = () => {
       </Typography>
     );
 
-  const { imgUrl, price, state, type, location, specs, details, videoURL } =
-    property;
+  const {
+    imgUrl,
+    price,
+    state,
+    type,
+    location,
+    specs,
+    details,
+    videoURL,
+    viewCount,
+  } = property;
   return (
     <Typography component="main">
       <Typography
@@ -53,7 +62,7 @@ const Property = () => {
         <Carousel autoPlay={false} showThumbs={false}>
           {imgUrl.map((url, i) => (
             <Typography component="div" onClick={() => setActiveImg(i)}>
-              <CardMedia component="img" image={url} alt="image" />
+              <CardMedia component="img" image={url} alt="dehradun" />
             </Typography>
           ))}
         </Carousel>
@@ -101,7 +110,7 @@ const Property = () => {
               >
                 {imgUrl.map((url) => (
                   <Typography component="div">
-                    <CardMedia component="img" image={url} alt="image" />
+                    <CardMedia component="img" image={url} alt="dehradun" />
                   </Typography>
                 ))}
               </Carousel>
@@ -191,7 +200,7 @@ const Property = () => {
             fontSize: "12px",
           }}
         >
-          4 people are currently viewing this property
+          {viewCount} people are currently viewing this property
         </Typography>
         <Typography component="div" variant="h5" marginBottom={2}>
           Property Details

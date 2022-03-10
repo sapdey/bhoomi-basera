@@ -62,6 +62,7 @@ export const plotOnSale = [
       "Boundary wall": "Two Sided",
     },
     videoURL: "https://www.youtube.com/watch?v=TyBUG3lz5xM",
+    viewCount: 6,
   },
   {
     id: 2,
@@ -89,7 +90,7 @@ export const plotOnSale = [
       // },
     ],
     type: "Plot for Resale in Shimla Bypass",
-    location: "Ramgarh",
+    location: "Ramgarh (Shimla bypass)",
     state: "Ready to Move",
     details: {
       Ownership: "Freehold",
@@ -100,6 +101,7 @@ export const plotOnSale = [
       "Boundary wall": "None",
     },
     videoURL: "https://www.youtube.com/watch?v=vNIjFQlnTyg",
+    viewCount: 10,
   },
   {
     id: 3,
@@ -108,7 +110,7 @@ export const plotOnSale = [
     specs: [
       {
         type: "Total area",
-        value: "2781 sq. ft.",
+        value: "3666 sq. ft.",
         logo: 1,
         color: "#F0F9FF",
         position: "-220px -20px",
@@ -121,7 +123,7 @@ export const plotOnSale = [
       },
     ],
     type: "Plot For Resale in Shimla Bypass",
-    location: "Nya Gaon",
+    location: "Nya Gaon (Shimla bypass)",
     state: "Ready to Move",
     details: {
       Ownership: "Freehold",
@@ -132,6 +134,7 @@ export const plotOnSale = [
       "Boundary wall": "None",
     },
     videoURL: "https://www.youtube.com/watch?v=dGaf1q8Wy3c",
+    viewCount: 5,
   },
   // {
   //   id: 4,
@@ -243,6 +246,7 @@ export const plotOnRent = [
       "Boundary wall": "Yes",
     },
     videoURL: "https://www.youtube.com/watch?v=HfHoOBvrJEs",
+    viewCount: 3,
   },
 ];
 
