@@ -13,6 +13,14 @@ import img1P4 from "./properties/naya-gaon/img1.jpg";
 import img2P4 from "./properties/naya-gaon/img2.jpg";
 import img3P4 from "./properties/naya-gaon/img3.jpg";
 import img4P4 from "./properties/naya-gaon/img4.jpg";
+import img1P5 from "./properties/nakronda-road/img1.jpg";
+import img2P5 from "./properties/nakronda-road/img2.jpg";
+import img3P5 from "./properties/nakronda-road/img3.jpg";
+import img4P5 from "./properties/nakronda-road/img4.jpg";
+import img1P6 from "./properties/bhauwala-dunga/img1.jpg";
+import img2P6 from "./properties/bhauwala-dunga/img2.jpg";
+import img3P6 from "./properties/bhauwala-dunga/img3.jpg";
+import img4P6 from "./properties/bhauwala-dunga/img4.jpg";
 import your_requirement from "./howitworks/your_requirement.png";
 import cost_estimation from "./howitworks/cost_estimation.png";
 import schedule_visit from "./howitworks/schedule_visit.png";
@@ -136,6 +144,72 @@ export const plotOnSale = [
     videoURL: "https://www.youtube.com/watch?v=dGaf1q8Wy3c",
     viewCount: 5,
   },
+  {
+    id: 4,
+    price: "₹18,97,500",
+    imgUrl: [img1P5, img2P5, img3P5, img4P5],
+    specs: [
+      {
+        type: "Total area",
+        value: "1025 sq. ft.",
+        logo: 1,
+        color: "#F0F9FF",
+        position: "-220px -20px",
+      },
+      {
+        type: "16500 per Guz",
+        value: "₹1851 per Sq f.t.",
+        color: "#FFF5E4",
+        position: "-280px -80px",
+      },
+    ],
+    type: "Plot For Resale in Nakronda Road",
+    location: "Dehradun",
+    state: "Ready to Move",
+    details: {
+      Ownership: "Freehold",
+      "Super Area": "1025 sq.ft / 115 Guz",
+      Overlooking: "Next to Road",
+      "Width of facing road": "18.0 ft",
+      Facing: "West",
+      "Boundary wall": "Demarcation Completed",
+    },
+    videoURL: "https://www.youtube.com/watch?v=9dyCIpQLPiY",
+    viewCount: 5,
+  },
+  {
+    id: 5,
+    price: "₹27,90,000",
+    imgUrl: [img1P6, img2P6, img3P6, img4P6],
+    specs: [
+      {
+        type: "Total area",
+        value: "4153 sq. ft.",
+        logo: 1,
+        color: "#F0F9FF",
+        position: "-220px -20px",
+      },
+      {
+        type: "6000 per Guz",
+        value: "671 per Sq f.t.",
+        color: "#FFF5E4",
+        position: "-280px -80px",
+      },
+    ],
+    type: "Plot For Resale in Bhauwala dunga Road",
+    location: "Dehradun",
+    state: "Ready to Move",
+    details: {
+      Ownership: "Freehold",
+      "Super Area": "4153 sq.ft / 465 Guz",
+      Overlooking: "Next to Road",
+      "Width of facing road": "15.0 ft",
+      Facing: "North-West",
+      "Boundary wall": "None",
+    },
+    videoURL: "https://www.youtube.com/watch?v=IwR4Z8TQU4M",
+    viewCount: 5,
+  },
   // {
   //   id: 4,
   //   price: "₹ 1.2 crores",
@@ -216,7 +290,7 @@ export const plotOnSale = [
 
 export const plotOnRent = [
   {
-    id: 4,
+    id: 6,
     price: "₹20,000 per month",
     imgUrl: [img1P1, img2P1, img3P1],
     specs: [
